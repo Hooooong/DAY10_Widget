@@ -300,11 +300,11 @@ ____________________________________________________
 
           - java 코드
 
-                ```java
-                ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-                    @Override
-                    public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                        // RatingBar 가 변경될 시 발생
-                    }
-                });
-                ```
+              ```java
+              ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+                  @Override
+                  public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                      // RatingBar 가 변경될 시 발생
+                  }
+              });
+              ```
