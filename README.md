@@ -8,6 +8,8 @@ ____________________________________________________
 ###### 공부정리
 ____________________________________________________
 
+  ![Widget 예제](https://github.com/Hooooong/DAY10_Widget/blob/master/image/Widget.png)
+
   - Widget의 종류
 
       1. ToggelButton
