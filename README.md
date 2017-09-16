@@ -8,7 +8,7 @@ ____________________________________________________
 ###### 공부정리
 ____________________________________________________
 
-  ![Widget 예제](https://github.com/Hooooong/DAY10_Widget/blob/master/image/Widget.png  width="180" height="320")
+  ![Widget 예제](https://github.com/Hooooong/DAY10_Widget/blob/master/image/Widget.png){:height="320px" width="180px"}
 
   - Widget의 종류
 
