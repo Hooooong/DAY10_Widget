@@ -317,7 +317,8 @@ ____________________________________________________
 
           - Web 의 Select-Option 과 유사한 Widget
 
-          ![Adapter]()
+          ![Adapter](https://github.com/Hooooong/DAY10_Widget/blob/master/image/Spinner.PNG)
+          
           - Spinner 는 특별하게 ListView, RecyclerView 와 유사하게 Adapter를 통하여 데이터를 바인딩한다.
 
           - AdapterView.OnItemSelectedListener 를 사용하여 Selected 의 상태 값을 알 수 있다.
@@ -348,7 +349,7 @@ ____________________________________________________
                       android.R.layout.simple_dropdown_item_1line,    // Resource(Android에서 제공)
                       data                                            // Data
               );
-      
+
               // 3. Spinner 와 Adapter 를 연결한다.
               Spinner spinner = (Spinner)findViewById(R.id.spinner);
               spinner.setAdapter(adapter);
