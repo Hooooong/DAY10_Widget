@@ -40,9 +40,9 @@ ____________________________________________________
                       switch (compoundButton.getId()) {
                           case R.id.toggleButton:
                               if (check) {
-                                  // Toggle 버튼이 켜짐
+                                  // Toggle On
                               } else {
-                                  // Toggle 버튼이 꺼짐
+                                  // Toggle Off
                               }
                               break;
                       }
