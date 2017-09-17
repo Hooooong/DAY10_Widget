@@ -8,11 +8,13 @@ ____________________________________________________
 ###### 공부정리
 ____________________________________________________
 
-  ![Widget 예제](https://github.com/Hooooong/DAY10_Widget/blob/master/image/Widget.png)
-
   - Widget의 종류
 
-      1. ToggelButton
+      ![Widget 예제](https://github.com/Hooooong/DAY10_Widget/blob/master/image/Widget.png)
+
+      -  순서 : ToggleButton, CheckBox, RadioButton, ProgressBar, Switch, SeekBar, RatingBar       
+
+      1. ToggleButton
 
           - On, Off 로 이루어진 Widget
           - CompoundButton.OnCheckedChangeListener 를 사용하여, On, Off 상태를 알 수 있다.
@@ -309,4 +311,59 @@ ____________________________________________________
                       // RatingBar 가 변경될 시 발생
                   }
               });
+              ```
+
+      8. Spinner
+
+          - Web 의 Select-Option 과 유사한 Widget
+
+          ![Adapter]()
+          - Spinner 는 특별하게 ListView, RecyclerView 와 유사하게 Adapter를 통하여 데이터를 바인딩한다.
+
+          - AdapterView.OnItemSelectedListener 를 사용하여 Selected 의 상태 값을 알 수 있다.
+
+          - xml 코드
+
+              ```xml
+              <Spinner
+                  android:id="@+id/spinner"
+                  android:layout_width="368dp"
+                  android:layout_height="wrap_content" />
+              ```
+          - java 코드
+
+              ```java
+              // 1. Spinner 에 입력될 데이터가 정의되어야 한다.
+              // 데이터 : String 배열, ArrayList, XML, Json 등으로
+              final String data[] ={"월","화","수","목","금","토","일"};
+              ArrayList<String> list = new ArrayList<>();
+
+              Collections.addAll(list, data);
+
+              // 2. Spinner 와 Data 를 연결하는 어뎁터
+              // Resource 를 커스터마이징이 가능하지만
+              // 기본적으로 Android 에서 제공해주는 Resource(android.R.layout) 가 있다.
+              ArrayAdapter<String> adapter = new ArrayAdapter<>(
+                      this,                                           // Context
+                      android.R.layout.simple_dropdown_item_1line,    // Resource(Android에서 제공)
+                      data                                            // Data
+              );
+      
+              // 3. Spinner 와 Adapter 를 연결한다.
+              Spinner spinner = (Spinner)findViewById(R.id.spinner);
+              spinner.setAdapter(adapter);
+
+              // 4. Spinner 에 Listener 를 달아준다.
+              spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                  @Override
+                  public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
+                      String selectedValue = data[position];
+                      textView.setText(selectedValue);
+                  }
+
+                  @Override
+                  public void onNothingSelected(AdapterView<?> adapterView) {
+
+                  }
+              });              
               ```

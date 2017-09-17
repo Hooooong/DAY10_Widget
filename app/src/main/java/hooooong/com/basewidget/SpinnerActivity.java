@@ -32,7 +32,7 @@ public class SpinnerActivity extends AppCompatActivity {
         // 기본적으로 Android 에서 제공해주는 Resource(android.R.layout) 가 있다.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 this,                                           // Context
-                android.R.layout.simple_dropdown_item_1line,    //Resource
+                android.R.layout.simple_dropdown_item_1line,    // Resource
                 data                                            // Data
         );
 
